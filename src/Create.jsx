@@ -13,7 +13,7 @@ function Create({onAddedTask}) {
         }
         setError('');
         console.log(`Task message: ${newTask}, and categorie: ${categorie}.`)
-        axios.post('http://localhost:3000/post', {task: newTask, categorie: categorie})
+        axios.post('https://cloudmanagmentback.onrender.com/post', {task: newTask, categorie: categorie})
         .then(result => {
             setNewTask('')
             setCategorie('Personal')

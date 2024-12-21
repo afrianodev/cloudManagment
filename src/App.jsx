@@ -22,7 +22,7 @@ function App() {
   }
 
   const fetchTasks = () => {
-    axios.get('http://localhost:3000/get')
+    axios.get('https://cloudmanagmentback.onrender.com/get')
       .then((result) => setTasks(result.data))
       .catch((err) => console.log(err));
   };
