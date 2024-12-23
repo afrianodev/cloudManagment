@@ -11,13 +11,13 @@ function Tasks() {
       }, [])
       
       const fetchTasks = () => {
-        axios.get('http://localhost:3000/get')
+        axios.get('https://cloudmanagmentback.onrender.com/get')
           .then((result) => setTasks(result.data))
           .catch((err) => console.log(err));
       };
 
     const handleDelete = (id) => {
-        axios.delete('http://localhost:3000/delete/'+id)
+        axios.delete('https://cloudmanagmentback.onrender.com/delete/'+id)
         .then(result => {console.log(result)
           fetchTasks()
         })
